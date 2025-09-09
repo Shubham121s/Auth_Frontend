@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Environment se baseURL lena
-const baseURL = import.meta.env.VITE_API_BASE_URL;
+const baseURL = import.meta.env.VITE_API_BASE_URL.replace(/\/+$/, "");
 
 const API = axios.create({
   baseURL: `${baseURL}/api`, // ensures /api prefix
